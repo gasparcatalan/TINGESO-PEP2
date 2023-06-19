@@ -1,7 +1,29 @@
 spring:
+  main:
+    web-application-type: reactive
   application:
     name: gateway-service
   cloud:
     config:
-      enable: true
+      enabled: true
       uri: http://localhost:8081
+      fail-fast: true
+      retry:
+        max-attempts: 10
+        initial-interval: 1000
+        multiplier: 1.5
+        max-interval: 5000
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
