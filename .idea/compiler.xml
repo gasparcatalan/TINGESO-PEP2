@@ -8,16 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-service" />
         <module name="pago-service" />
-        <module name="laboratorio-service" />
         <module name="config-service" />
+        <module name="gateway-service" />
+        <module name="laboratorio-service" />
         <module name="proveedor-service" />
         <module name="acopios-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="acopios-service" target="11" />
-      <module name="config-service" target="17" />
+      <module name="config-service" target="11" />
       <module name="eureka-service" target="17" />
+      <module name="gateway-service" target="11" />
       <module name="laboratorio-service" target="11" />
       <module name="pago-service" target="11" />
       <module name="proveedor-service" target="11" />
@@ -28,6 +30,7 @@
       <module name="acopios-service" options="-parameters" />
       <module name="config-service" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
       <module name="laboratorio-service" options="-parameters" />
       <module name="pago-service" options="-parameters" />
       <module name="proveedor-service" options="-parameters" />

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Back-End/acopios-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/acopios-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/config-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/config-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/eureka-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/eureka-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/gateway-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/laboratorio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/laboratorio-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/pago-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/pago-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/proveedores-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Back-End/proveedores-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/acopios-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/acopios-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-service/src/main/java" charset="UTF-8" />
