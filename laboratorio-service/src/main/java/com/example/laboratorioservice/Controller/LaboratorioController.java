@@ -11,7 +11,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/lab")
+@RequestMapping("/laboratorio")
 public class LaboratorioController {
 
     @Autowired
@@ -40,7 +40,7 @@ public class LaboratorioController {
     @PostMapping("/subir")
     public String cargarArchivo(@RequestParam ("lab")MultipartFile lab){
         laboratorioService.guardar(lab);
-        laboratorioService.leerCsv("Resultados.csv");
+        laboratorioService.leerCsv("resultados.csv");
         return "Archivo Cargado Exitosamente";
 
     }

@@ -10,7 +10,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/pagos")
+@RequestMapping("/pago")
 public class PagoController {
 
     @Autowired
@@ -33,6 +33,15 @@ public class PagoController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(pagos);
+
+    }
+    @GetMapping("pago/{id}")
+    public ResponseEntity<PagoEntity> PagosCodigo(@PathVariable Long id){
+        PagoEntity pago = pagoService.obtenerporID(id);
+        if (pago == null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(pago);
 
     }
 

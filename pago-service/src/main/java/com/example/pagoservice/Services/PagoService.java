@@ -9,6 +9,9 @@ import com.example.pagoservice.Models.Acopio;
 import com.example.pagoservice.Repositories.PagoRepository;
 import lombok.Generated;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -37,20 +40,50 @@ public class PagoService {
         return (Proveedor) restTemplate.getForObject("http://proveedores-service/proveedores/" + codigo, Proveedor.class);
     }
     public List<Proveedor> obtenerProveedores(){
-        return (List<Proveedor>) restTemplate.getForObject("http://proveedores-service/proveedores/", Proveedor.class);
+        ResponseEntity<List<Proveedor>> response = restTemplate.exchange(
+                "http://proveedores-service/proveedores/",
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<Proveedor>>() {}
+        );
+        return response.getBody();
     }
 
     public Laboratorio obtenerUnLab(String codigo){
-        return restTemplate.getForObject("http://laboratorio-service/lab/" + codigo, Laboratorio.class);
+        try {
+            return restTemplate.getForObject("http://laboratorio-service/lab/" + codigo, Laboratorio.class);
+        } catch (Exception e) {
+            // Manually create a new instance with default values when the REST call fails
+            Laboratorio l = new Laboratorio();
+            l.setCodigoProveedor(codigo);
+            l.setGrasas(0.0);
+            l.setSolidos(0.0);
+            return l;
+        }
     }
 
     public Double obtenerKlsLeche(String codigo){
-        return restTemplate.getForObject("http://acopios-service/acopios/klsLeche/" + codigo, Double.class);
+        try {
+            Double leche = restTemplate.getForObject("http://acopios-service/acopios/klsLeche/" + codigo, Double.class);
+            // Use a default value when the REST call returns null
+            return leche != null ? leche : 0.0;
+        } catch (Exception e) {
+            // Use a default value when the REST call fails
+            return 0.0;
+        }
     }
 
     public Integer getTotalTurnos(String codigo, String turno){
-        return restTemplate.getForObject("http://acopios-service/acopios/"+ codigo+"/"+turno, Integer.class);
+        try {
+            Integer turnos = restTemplate.getForObject("http://acopios-service/acopios/"+ codigo+"/"+turno, Integer.class);
+            // Use a default value when the REST call returns null
+            return turnos != null ? turnos : 0;
+        } catch (Exception e) {
+            // Use a default value when the REST call fails
+            return 0;
+        }
     }
+
 
 
     public PagoEntity obtenerporID(Long id){

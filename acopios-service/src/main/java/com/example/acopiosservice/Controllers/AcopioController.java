@@ -36,7 +36,7 @@ public class AcopioController {
     @PostMapping
     public String leerAcopios(@RequestParam("nombre")MultipartFile nombre){
         acopioService.guardar(nombre);
-        acopioService.leerCsv("Acopio.csv");
+        acopioService.leerCsv("acopio.csv");
         return "Archivo correctamente registrado";
     }
 

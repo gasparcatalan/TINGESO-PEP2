@@ -1,0 +1,45 @@
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (10.0, 'M', 1001, '2023-04-27');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (8.0, 'M', 1001, '2023-04-28');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (12.0, 'M', 1001, '2023-04-29');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (9.0, 'M', 1001, '2023-04-30');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (11.0, 'M', 1001, '2023-05-01');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (10.0, 'M', 1001, '2023-05-02');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (9.0, 'M', 1001, '2023-05-03');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (12.0, 'M', 1001, '2023-05-04');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (8.0, 'M', 1001, '2023-05-05');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (11.0, 'M', 1001, '2023-05-06');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (7.0, 'T', 1001, '2023-04-27');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (8.0, 'T', 1001, '2023-04-28');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (11.0, 'T', 1001, '2023-04-29');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (6.0, 'T', 1001, '2023-04-30');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (10.0, 'T', 1001, '2023-05-01');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (8.0, 'T', 1001, '2023-05-02');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (9.0, 'T', 1001, '2023-05-03');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (11.0, 'T', 1001, '2023-05-04');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (9.0, 'T', 1001, '2023-05-05');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (12.0, 'T', 1001, '2023-05-06');
+
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (6.7, 'M', 1002, '2023-04-27');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (7.9, 'M', 1002, '2023-04-28');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (8.3, 'M', 1002, '2023-04-29');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (9.2, 'M', 1002, '2023-04-30');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (10.5, 'M', 1002, '2023-05-01');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (9.4, 'M', 1002, '2023-05-02');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (8.7, 'M', 1002, '2023-05-03');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (10.8, 'M', 1002, '2023-05-04');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (11.1, 'M', 1002, '2023-05-05');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (12.3, 'M', 1002, '2023-05-06');
+
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-04-27');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-04-28');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-04-29');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-04-30');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-05-01');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-05-02');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-05-03');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-05-04');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-05-05');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (100.0, 'T', 1003, '2023-05-06');
+
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (13.3, 'T', 1004, '2023-05-06');
+INSERT INTO acopios (kls_leche, turno, codigo_proveedor, fecha) VALUES (13.3, 'M', 1004, '2023-05-06');

@@ -18,3 +18,8 @@ spring:
     hibernate:
       dialect: MySQL8Dialect
       ddl-auto: create
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

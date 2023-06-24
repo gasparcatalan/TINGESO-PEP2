@@ -19,7 +19,7 @@
       <module name="acopios-service" target="11" />
       <module name="config-service" target="11" />
       <module name="eureka-service" target="17" />
-      <module name="gateway-service" target="11" />
+      <module name="gateway-service" target="1.8" />
       <module name="laboratorio-service" target="11" />
       <module name="pago-service" target="11" />
       <module name="proveedor-service" target="11" />

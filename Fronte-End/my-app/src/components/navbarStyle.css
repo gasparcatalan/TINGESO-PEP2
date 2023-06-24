@@ -1,0 +1,45 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+  }
+.header{
+    background-color: #000000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+  }
+  .header .logo{
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: auto;
+    text-decoration: none;
+    font-size: x-large;
+  }
+  
+  .logo h1:hover{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    transform: scale(0.95);
+  }
+  .logo h1{
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .header .btn button{
+    margin-left: 10px;
+    font-weight: 300;
+    padding: 3px 4px;
+    background: #e1dcd7;
+    border: 10px solid #d364d5;
+    border-radius: 300px;
+    cursor: pointer;
+  }
+  .header .btn button:hover{
+    background-color: #ed7d1b;
+    transform: scale(0.95);
+  }

@@ -3,9 +3,7 @@ package com.example.proveedoresservice.Entity;
 import com.sun.istack.NotNull;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "proveedores")
@@ -15,6 +13,7 @@ import javax.persistence.Table;
 public class ProveedorEntity {
     @Id
     @NotNull
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
     private String codigo;
