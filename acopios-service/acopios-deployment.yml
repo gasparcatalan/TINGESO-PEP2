@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acopios-deployment
+  labels:
+    app: acopios-deployment
+spec:
+  selector:
+    matchLabels:
+      app: acopios-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: acopios-deployment
+    spec:
+      containers:
+        - name: acopios-service
+          image: gaspitas241/acopios
+          ports:
+            - containerPort: 8083
+          env:
+            - name: spring.cloud.config.uri
+              value: http://config-service:8081
+            - name: spring.config.import
+              value: optional:configserver:http://config-service:8081
+            - name: eureka.client.serviceUrl.defaultZone
+              value: http://eureka-service:8761/eureka
+            - name: EUREKA
+              value: eureka-service
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: mysql-db
+                  key: host
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: mysql-db
+                  key: name
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-user-credentials
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-user-credentials
+                  key: password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: acopios-service
+  labels:
+    app: acopios-service
+spec:
+  selector:
+    app: acopios-deployment
+  ports:
+    - protocol: TCP
+      port: 8083
+      targetPort: 8083
+  type: LoadBalancer
