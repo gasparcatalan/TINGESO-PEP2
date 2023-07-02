@@ -8,3 +8,5 @@ eureka:
       default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     peer-node-read-timeout-ms: 5000
+  instance:
+    prefer-ip-address: true
