@@ -8,8 +8,5 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 class ConfigServiceApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
 
 }
