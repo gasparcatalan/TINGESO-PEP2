@@ -8,5 +8,5 @@ spring:
         max-attempts: 100
         max-interval: 10000
       enable: true
-      uri: http://localhost:8081
+      uri: http://config-service:8081
 
