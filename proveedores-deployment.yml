@@ -22,19 +22,21 @@ spec:
           env:
             - name: SPRING_CLOUD_CONFIG_URI
               value: http://config-service:8081
-            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
-              value: http://eureka-service:8761
+            - name: eureka.client.serviceUrl.defaultZone
+              value: http://eureka-service:8761/eureka
             - name: eureka.instance.preferIpAddress
               value: "true"
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysql:3306/milkstgo
             - name: DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: proveedores
+                  name: mysql-config
                   key: host
             - name: DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: proveedores
+                  name: mysql-config
                   key: name
             - name: DB_USERNAME
               valueFrom:

@@ -1,65 +1,65 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pago-deployment
+  name: acopios-deployment
   labels:
-    app: pago-deployment
+    app: acopios-deployment
 spec:
   selector:
     matchLabels:
-      app: pago-deployment
+      app: acopios-deployment
   replicas: 1
   template:
     metadata:
       labels:
-        app: pago-deployment
+        app: acopios-deployment
     spec:
       containers:
-        - name: pago-service
-          image: gaspitas241/pago
+        - name: acopios
+          image: gaspitas241/acopios
           ports:
-            - containerPort: 8085
+            - containerPort: 8081
           env:
-            - name: spring.cloud.config.uri
+            - name: SPRING_CLOUD_CONFIG_URI
               value: http://config-service:8081
-            - name: spring.config.import
-              value: optional:configserver:http://config-service:8081
             - name: eureka.client.serviceUrl.defaultZone
               value: http://eureka-service:8761/eureka
-            - name: EUREKA
-              value: eureka-service
+            - name: eureka.instance.preferIpAddress
+              value: "true"
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysql:3306/milkstgo
             - name: DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: mysql-db
+                  name: mysql-config
                   key: host
             - name: DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: mysql-db
-                  key: name
+                  name: mysql-config
+                  key: name4
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: mysql-user-credentials
+                  name: mysql-root-credentials
                   key: username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mysql-user-credentials
+                  name: mysql-root-credentials
                   key: password
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: pago-service
+  name: acopios-service
   labels:
-    app: pago-service
+    app: acopios-service
 spec:
   selector:
-    app: pago-deployment
+    app: acopios-deployment
   ports:
     - protocol: TCP
-      port: 8085
-      targetPort: 8085
+      port: 8083
+      targetPort: 8083
   type: LoadBalancer
