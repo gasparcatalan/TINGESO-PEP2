@@ -37,7 +37,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: mysql-config
-                  key: name2
+                  key: name
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:

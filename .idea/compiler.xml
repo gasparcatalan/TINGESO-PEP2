@@ -6,10 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pago-service" />
         <module name="eureka-service" />
+        <module name="pago-service" />
         <module name="config-service" />
         <module name="gateway-service" />
+        <module name="proveedores-service" />
         <module name="laboratorio-service" />
         <module name="proveedor-service" />
         <module name="acopios-service" />
@@ -23,6 +24,7 @@
       <module name="laboratorio-service" target="11" />
       <module name="pago-service" target="11" />
       <module name="proveedor-service" target="11" />
+      <module name="proveedores-service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,6 +36,7 @@
       <module name="laboratorio-service" options="-parameters" />
       <module name="pago-service" options="-parameters" />
       <module name="proveedor-service" options="-parameters" />
+      <module name="proveedores-service" options="-parameters" />
     </option>
   </component>
 </project>

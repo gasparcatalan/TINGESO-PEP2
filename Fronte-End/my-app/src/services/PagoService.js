@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/pago';
+const API_URL = 'http://localhost:53545/pago';
 
 
 class PagoService {

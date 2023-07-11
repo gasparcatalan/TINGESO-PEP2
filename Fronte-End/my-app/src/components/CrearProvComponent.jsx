@@ -44,14 +44,7 @@ class CrearProvComponent extends Component{
             categoria: this.state.categoria,
             retencion: this.state.retencion};
         
-        let axiosConfig = {
-            headers: {
-                'Content-Type': 'application/json;charset=UTF-8',
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": 'GET,POST,PUT,DELETE'
-            }
-        }
-        axios.post("http://localhost:8080/proveedores", proveedor, axiosConfig).then(res =>{
+        ProveedorService.crearProveedor(proveedor).then(res =>{
             window.location.href = "/listar-proveedores";
         })
     }

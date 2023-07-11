@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/laboratorio-service/laboratorio-service.iml" filepath="$PROJECT_DIR$/laboratorio-service/laboratorio-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pago-service/pago-service.iml" filepath="$PROJECT_DIR$/pago-service/pago-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/proveedores-service/proveedor-service.iml" filepath="$PROJECT_DIR$/proveedores-service/proveedor-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proveedores-service/proveedores-service.iml" filepath="$PROJECT_DIR$/proveedores-service/proveedores-service.iml" />
     </modules>
   </component>
 </project>

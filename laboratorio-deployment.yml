@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: laboatorio-deployment
+        app: laboratorio-deployment
     spec:
       containers:
         - name: laboratorio
@@ -37,7 +37,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: mysql-config
-                  key: name3
+                  key: name
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
